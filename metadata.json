@@ -1,0 +1,6 @@
+{
+  "name": "CineDrive - Hard Drive Movie Gift Menu & Launcher",
+  "description": "Create an interactive cinematic GUI movie menu, executable launcher, and offline catalog for external hard drives with duration, genre, date, and short synopsis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

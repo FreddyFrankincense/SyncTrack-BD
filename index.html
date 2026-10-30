@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="SyncTrackBD" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <title>CineDrive - Hard Drive Movie Gift Menu & Launcher</title>
+    <meta name="description" content="Create an interactive cinematic GUI movie menu, executable launcher, and offline catalog for external hard drives with duration, genre, date, and short synopsis." />
+    <meta property="og:title" content="CineDrive - Hard Drive Movie Gift Menu & Launcher" />
+    <meta property="og:description" content="Create an interactive cinematic GUI movie menu, executable launcher, and offline catalog for external hard drives with duration, genre, date, and short synopsis." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      // Suppress Vite HMR WebSocket connection errors as specified in AI Studio guidelines
+      window.addEventListener('unhandledrejection', function(event) {
+        if (
+          event.reason &&
+          (event.reason.message?.includes('WebSocket') ||
+           event.reason.stack?.includes('createWebSocketModuleRunnerTransport') ||
+           event.reason.stack?.includes('@vite/client'))
+        ) {
+          event.preventDefault();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        if (
+          event.message?.includes('WebSocket') ||
+          event.filename?.includes('@vite/client') ||
+          event.error?.stack?.includes('createWebSocketModuleRunnerTransport')
+        ) {
+          event.preventDefault();
+        }
+      });
+      // Capture PWA beforeinstallprompt early before React mounts
+      window.__deferredPwaPrompt = null;
+      window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        window.__deferredPwaPrompt = e;
+        window.dispatchEvent(new Event('pwa-prompt-ready'));
+      });
+    </script>
+  </head>
+  <body class="bg-neutral-950 text-neutral-100 antialiased font-sans selection:bg-amber-500/25 selection:text-amber-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

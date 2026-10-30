@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#171717" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </radialGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Rounded Square -->
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)" />
+  <rect x="12" y="12" width="488" height="488" rx="84" fill="none" stroke="#262626" stroke-width="6" />
+
+  <!-- Outer Blu-ray Disc Ring -->
+  <circle cx="256" cy="256" r="168" fill="none" stroke="url(#amberGrad)" stroke-width="18" opacity="0.9" />
+  <circle cx="256" cy="256" r="126" fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="18 12" opacity="0.55" />
+
+  <!-- Inner Spindle Hub -->
+  <circle cx="256" cy="256" r="46" fill="#171717" stroke="#f59e0b" stroke-width="8" />
+  <circle cx="256" cy="256" r="16" fill="#0a0a0a" />
+
+  <!-- Sync Waveform Bars Across Center -->
+  <g fill="url(#cyanGrad)">
+    <rect x="96" y="232" width="14" height="48" rx="7" />
+    <rect x="122" y="204" width="14" height="104" rx="7" />
+    <rect x="148" y="176" width="14" height="160" rx="7" />
+    <rect x="174" y="216" width="14" height="80" rx="7" />
+    <rect x="324" y="216" width="14" height="80" rx="7" />
+    <rect x="350" y="176" width="14" height="160" rx="7" />
+    <rect x="376" y="204" width="14" height="104" rx="7" />
+    <rect x="402" y="232" width="14" height="48" rx="7" />
+  </g>
+
+  <!-- Red Playhead Sync Needle -->
+  <line x1="256" y1="64" x2="256" y2="448" stroke="#ef4444" stroke-width="6" />
+  <polygon points="256,52 272,68 256,84 240,68" fill="#ef4444" />
+</svg>
